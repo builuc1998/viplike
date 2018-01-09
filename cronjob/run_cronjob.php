@@ -1,0 +1,11 @@
+<?php
+require_once('/var/www/html/library/common.php');
+curl('http://autofbpro.net/cronjob/vip_like.php');
+curl('http://autofbpro.net/cronjob/vip_like2.php');
+curl('http://autofbpro.net/cronjob/vip_like3.php');
+curl('http://autofbpro.net/cronjob/vip_like4.php');
+curl('http://autofbpro.net/cronjob/vip_like5.php');
+curl('http://autofbpro.net/cronjob/bot_like.php');
+curl('http://autofbpro.net/cronjob/bot_like2.php');
+curl('http://autofbpro.net/cronjob/bot_like3.php');
+?>

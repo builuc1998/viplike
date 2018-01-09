@@ -1,0 +1,52 @@
+<div class="col-md-12">
+    <div class="box box-primary" style="padding:10px">
+        <div class="box-header" style="text-align:center">
+            <h2 class="box-title"><label><font color="red">BOT Likes</font></label></h2>
+        </div>
+        <div class="box-header with-border">
+            
+        </div>
+        <div class="box-body">
+            <div class="form-group">
+                <label for="id">Access Token:</label>
+                <input type="text" class="form-control" onchange="checkToken()" onpaste="setTimeout(function(){ checkToken() }, 1000)" id="token" placeholder="Account token to install BOT" required="" />
+            </div>
+            <input type="hidden" id="type" value="LIKE" />
+            <input type="hidden" id="check" value="0" />
+            <div class="form-group">
+               <font color="red" style="font-weight: bold;" id="uid"></font><br />
+               <font color="red" style="font-weight: bold;" id="name"></font>
+            </div>
+        </div>
+
+        <div class="box-footer">
+            <input type="submit" id="btn-auto" onclick="install_botlike()" class="btn btn-danger col-md-12" value="Install BOT" />
+        </div>
+    </div>
+    <p style="color: red; font-size: 18px;">$message</p>
+    <div class="box box-primary" style="$display">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-user"></i> Reactions ID list</h3>
+        </div>
+        <div class="box-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>UID</th>
+                    <th>Manager</th>
+                    <th>Type</th>
+                    <th>Active</th>
+                    <th>Delete</th>
+                </tr>
+                $begin_loop
+                <tr>
+                    <td>$uid</td>
+                    <th style="color: red;">$username</th>
+                    <td>$type</td>
+                    <td><input type="checkbox" onclick="active_bot('$uid')" id="active" $checked /></td>
+                    <td><a href="javascript:void(0)" onclick="delete_bot($uid)"><i class="fa fa-trash-o"></i> </a></td>
+                </tr>
+                $end_loop
+            </table>
+        </div>
+    </div>
+</div>

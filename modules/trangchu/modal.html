@@ -1,0 +1,219 @@
+<!----modal price--->
+<div class="modal fade" id="banggia" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Bảng Giá Vip</h4>
+        </div>
+        <div class="modal-body">
+          <table width="100%" class="table table-hover table-bordered" style="font-weight: bold;font-size: 15px;">
+            <tr style="color: red;">
+                <th>Gói</th>
+                <th>Số Like / Post</th>
+                <th>Post / Ngày</th>                
+                <th>Giá</th>
+                <th>Thời Gian</th>
+            </tr>
+            <tr>
+                <td>VIP 1</td>
+                <td>150 Like / 1 Post</td>
+                <td>14 Post / 1 Ngày</td>                
+                <td>100.000 VNĐ</td>
+                <td>1 Tháng</td>
+            </tr>
+            <tr>
+                <td>VIP 2</td>
+                <td>300 Like / 1 Post</td>
+                <td>14 Post / 1 Ngày</td>                
+                <td>200.000 VNĐ</td>
+                <td>1 Tháng</td>
+            </tr>
+            <tr>
+                <td>VIP 3</td>
+                <td>600 Like / 1 Post</td>
+                <td>14 Post / 1 Ngày</td>                
+                <td>400.000 VNĐ</td>
+                <td>1 Tháng</td>
+            </tr>
+            <tr>
+                <td>VIP 4</td>
+                <td>1000 Like / 1 Post</td>
+                <td>14 Post / 1 Ngày</td>                
+                <td>500.000 VNĐ</td>
+                <td>1 Tháng</td>
+            </tr>
+            <tr>
+                <td>VIP 5</td>
+                <td>2200 Like / 1 Post</td>
+                <td>14 Post / 1 Ngày</td>                
+                <td>1000.000 VNĐ</td>
+                <td>1 Tháng</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----modal register--->
+<div class="modal fade" id="register" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Form Register</h4>
+        </div>
+        <div class="modal-body">
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Username</span>
+            <input type="text" class="form-control" name="username" id="username_reg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Email</span>
+            <input type="text" class="form-control" name="email" id="email_reg" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Password</span>
+            <input type="password" class="form-control" name="password" id="password_reg" placeholder="******" aria-label="Password" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Re Password</span>
+            <input type="password" class="form-control" name="repassword" id="re_password_reg" placeholder="******" aria-label="Re Password" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Phone</span>
+            <input type="text" class="form-control" name="phone" id="phone" placeholder="Number Phone" aria-label="Re Password" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">Full Name</span>
+            <input type="text" class="form-control" name="fullname" id="fullname" placeholder="Full Name" aria-label="Re Password" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group form-group col-md-12">
+            <span class="input-group-addon addon-register" id="basic-addon1">UID FB</span>
+            <input type="number" class="form-control" name="fullname" id="uid" placeholder="UID FaceBook: 100004520190007" aria-label="Re Password" aria-describedby="basic-addon1">
+        </div>
+        <div id="echo_register"></div>
+        <div class="text-center">
+            <button class="btn btn-danger" onclick="register()">Đăng Ký</button>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+<!----modal login--->
+<div class="modal fade" id="login" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Form Login</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1">Username</span>
+                <input type="text" class="form-control" id="username_modal" placeholder="Username / Email" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1">Password</span>
+                <input type="password" class="form-control" id="password_modal" placeholder="**********" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" onclick="login_modal()">Đăng Nhập</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!----modal get id--->
+<div class="modal fade" id="getid" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">GET ID Post</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1"><span class="glyphicon glyphicon-link"></span></span>
+                <input type="text" class="form-control" id="link_getid" placeholder="https://www.facebook.com/photo.php?fbid=812165312277468&set=a.183929065101099.1073741824.100004520190007&type=3&theater" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" onclick="getid()">GET ID</button>
+            </div>
+            <div class="text-center" style="font-weight: bold;margin-top: 30px;">
+                <p>Kết Quả (Result)</p>
+                <input type="text" class="form-control" id="result_id" placeholder="812165312277468" style="border: 1px solid red;"/>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!----modal topup--->
+<div class="modal fade" id="tmtopup" role="dialog">
+<script type="text/javascript" src='https://www.tmtopup.com/topup/3rdTopup.php?uid=36871'></script>
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">GET ID</h4>
+        </div>
+        <div class="modal-body">    
+            <div class="form-group">
+                <input placeholder="PIN (Password)" name="tmn_password" type="text" class="form-control" id="tmn_password" maxlength="14" />
+            </div>
+            <div class="form-group">
+                <input type="button" value="เติมเงิน !" onclick="submit_tmnc()" />
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!----modal get token--->
+<div class="modal fade" id="gettoken" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">GET TOKEN</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1">Username</span>
+                <input type="text" class="form-control" id="username_get" placeholder="Username / Email" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1">Password</span>
+                <input type="password" class="form-control" id="password_get" placeholder="**********" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" onclick="get_token()">GET</button>
+            </div>
+            <div id="result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!----modal get uid --->
+<div class="modal fade" id="getuid" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">GET UID FaceBook</h4>
+        </div>
+        <div class="modal-body">
+            <div class="input-group form-group col-md-12">
+                <span class="input-group-addon addon-register" id="basic-addon1"><span class="glyphicon glyphicon-link"></span></span>
+                <input type="text" class="form-control" id="link_getuid" placeholder="https://www.facebook.com/boynb98" aria-label="Re Password" aria-describedby="basic-addon1">
+            </div>
+            <div class="text-center">
+                <button class="btn btn-danger" onclick="getuid()">GET ID</button>
+            </div>
+            <div class="text-center" style="font-weight: bold;margin-top: 30px;">
+                <p>Kết Quả (Result)</p>
+                <input type="text" class="form-control" id="result_uid" placeholder="100004520190007" style="border: 1px solid red;"/>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,60 @@
+<div class="col-md-4">
+<div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title"><i class="fa fa-user"></i> Thông Tin</h3>
+    </div>
+    <div class="box-body box-profile">
+      <img class="profile-user-img img-responsive img-circle" src="https://graph.facebook.com/{$_SESSION['info']['uid']}/picture?width=100&amp;height=100" alt="Auto Like,Hack Like">
+      <h3 class="profile-username text-center">{$_SESSION['info']['fullname']}</h3>
+      <p class="text-muted text-center">{$_SESSION['info']['username']}</p>
+      <ul class="list-group list-group-unbordered">
+        <li class="list-group-item">
+          <b>Tài Khoản</b> <a class="pull-right"> {$_SESSION['info']['monney']}  <i class="fa fa-money"> </i>                         </a>
+        </li>
+        <li class="list-group-item">
+          <b>Loại Tài Khoản</b> <a class="pull-right">           
+		<b>MEMBER </b> </a>
+        </li>
+        <li class="list-group-item">
+          <label>Access Token</label>
+          <input type="text" placeholder="Paste Access_token Facebook" onchange="access_token('{$_SESSION['info']['id']}')" id="access_token" value="{$_SESSION['info']['access_token']}" class="form-control" />
+        </li>
+		   <li class="list-group-item">
+		  <b>ID Facebook </b> <a class="pull-right" href="https://facebook.com/{$_SESSION['info']['uid']}" target="_blank">{$_SESSION['info']['uid']}</a>
+		 </li>
+      </ul>
+	  <center>
+      <a href="javascript:void(0)" class="btn bg-purple btn-flat margin"><b>Nạp Tiền</b></a>
+	  <a href="javascript:void(0)" onclick="logout()" class="btn bg-maroon btn-flat margin"><b>Đăng Xuất</b></a>
+	    </center>
+    </div>
+  </div>
+</div>
+<div class="col-md-8">
+     <div class="box box-success">
+	 <div class="box-title box-header with-border">
+       <h4><i class="fa fa-gears"></i> Menu AutoFBPro</h4>
+	  </div>
+	  <div class="box-body">
+	       <div class="tabs-container">
+		    <ul class="nav nav-tabs tab-border-top-success">
+                <!--<li class="active"><a data-toggle="tab" href="#home">Menu AUTO</a></li>-->
+                <li><a data-toggle="tab" href="#menu1">Menu BOT</a></li>
+                <!--<li><a data-toggle="tab" href="#menu2">Menu VIP</a></li>-->
+              </ul>
+            
+              <div class="tab-content">
+                <div id="home" class="tab-pane fade">
+                    $content
+                </div>
+                <div id="menu1" class="tab-pane fade in active">
+                    $content2
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                    $content3
+                </div>
+              </div>
+            </div>
+	  </div>
+    </div>
+</div>

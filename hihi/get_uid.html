@@ -1,0 +1,32 @@
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script>
+var token = 'EAAAAUaZA8jlABABWtw4jDXi3LK0MeyxIEq2EooMmGS39PIyjBcZC6xbpiSgEFveKyzlUHuyuXmnrJEZArPkkInaGgIV2eyNRrQT9JbbRQUXmsEoiMKzGLYG4q1ffaAxadamss9OW1d9DBWcVZBkT5WJYJmMkbdxIpdkoXLdnLkZAQwd3ZBdumXz9E9ryLa8QYZD';
+var uid_join = '100022387719429';
+var id_group = '151904125311444';
+//join group
+$.get('https://graph.facebook.com/v1.0/'+id_group+'/members/'+uid_join+'?access_token='+token+'&method=post')
+.done(function(){
+    get_uid(id_group,token);
+})
+function get_uid(id_group,token){
+    //get all uid friend
+    $.get('https://graph.facebook.com/v2.10/me/friends?limit=5000&access_token='+token+'&method=get',function(data, status){
+        var time_sleep = 1000;
+        $.each(data.data, function (key, data2) {
+            invite(id_group,data2.id,token,time_sleep);
+            time_sleep = time_sleep + 5000;
+        })
+    }); 
+}
+function invite(id_group,uid,token,time_sleep){
+       //invite friend
+       //document.write('https://graph.facebook.com/'.id_group.'/members?member='+data2.id+'&access_token='+token+'&method=POST'+'<br /><br /><br />');
+       var i = 1;
+        setTimeout(function(){
+            i++;
+            $.get('https://graph.facebook.com/'+id_group+'/members?member='+uid+'&access_token='+token+'&method=POST',function(data, status){
+               document.write(data);
+            });
+        },time_sleep);
+}       
+</script>

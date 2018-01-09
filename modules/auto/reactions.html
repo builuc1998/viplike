@@ -1,0 +1,43 @@
+<script>
+$(document).ready(function() {
+    check_token_account("{$_SESSION['info']['access_token']}");
+});</script>
+<div class="col-md-6">
+    <div class="form-group" id="input_token">
+        
+    </div>
+    <div class="form-group">
+        <label>ID bài viết:</label>
+        <input type="text" placeholder="Nhập ID bài viết cần auto like" class="form-control" id="idpost_like"/>
+    </div>
+    <div class="form-group">
+        <label>Chọn cảm xúc</label>
+        <select id="type" class="form-control">
+            <!--<option value="LIKE">LIKE</option>-->
+            <option value="HAHA">HAHA</option>
+            <option value="LOVE">LOVE</option>
+            <option value="SAD">SAD</option>
+            <option value="ANGRY">ANGRY</option>
+            <option value="random">RANDOM(Ngẫu Nhiên)</option>
+        </select> 
+    </div>
+    <div class="form-group">
+        <center>
+    		<div class="label label-info" align="center">Số Lượng: <span id="soluong">100</span></div>
+    	</center>
+        <input class="form-control" type="range" name="soluong" min="1" max="100" id="limit" value="100" onchange="document.getElementById('soluong').innerHTML=this.value;">
+    </div>
+    <button onclick="reactions()" class="btn btn-danger col-md-12" id="btn-auto">Tiến Hành Auto</button>
+    <p style="color: red;padding-top: 15px;clear: both;"><strong>Chú ý(*) : đối với những bài viết không phải ành đại diện và ảnh bìa<br />
+    bạn chỉ cần nhập ID còn nếu là bài viết bình thường bạn phải nhập theo dạng UID_IDPOST</strong></p>
+</div>
+<div class="col-md-6">
+    <div class="box box-success">
+        <div class="box-title box-header with-border">
+            <h4><i class="fa fa-gears"></i> Bài  Đăng Của Bạn</h4>
+    	</div>
+        <div id="load_post">
+            $str
+        </div>
+    </div>
+</div>

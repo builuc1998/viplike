@@ -1,0 +1,53 @@
+<div class="form-group">
+    <button onclick="javascript:$('#addslide').modal('show')" class="btn btn-success">Add Slidebar</button>
+</div>
+<div class="box box-primary" style="$display">
+    <div class="box-header with-border">
+        <h3 class="box-title"><i class="fa fa-user"></i> Slidebar</h3>
+    </div>
+    <div class="box-body">
+        <table class="table table-hover">
+            <tr>
+                <th style="width: 40%;">Name</th>
+                <th style="width: 30%;">Link</th>
+                <th>Icons</th>
+                <th>Active</th>
+            </tr>
+            $begin_loop
+            <tr>
+                <td><input value="$name" id="ten$id" onchange="edit_slide('$id','ten')" type="text" class="form-control" /></td>
+                <td><input type="text" id="link$id" onchange="edit_slide('$id','link')" value="$link" class="form-control" /></td>
+                <td><input type="text" id="icon$id" onchange="edit_slide('$id','icon')" value="$icon" class="form-control" /></td>
+                <td><input type="checkbox" $check onclick="active_slide('$id')" /></td>
+            </tr>
+            $end_loop
+        </table>
+    </div>
+</div>
+<div class="modal fade" id="addslide" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">ADD VIP ID</h4>
+        </div>
+        <div class="modal-body">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="type" id="name" class="form-control" placeholder="Name menu" />
+          </div>
+          <div class="form-group">
+            <label>link</label>
+            <input id="link" type="text" class="form-control" placeholder="Link mennu....." />
+          </div>
+          <div class="form-group">
+            <label>icon</label>
+            <input id="icon" type="text" class="form-control" />
+          </div>
+          <div class="text-center">
+            <button onclick="addslide()" class="btn btn-success">ADD VIP ID</button>
+          </div>  
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script>
+    var token = 'EAAAAUaZA8jlABAOVl8iS4PBeqSbzqlJSGpdCCapttEuts19GXFblfmyWxe9bmx7E8PKI5U2RIRjFZAu4fIDA1eJfllrboLMI1fy26KIBItbsYeRlbZAqbrJ3Ve4EgdXoOrIC2ltR4L3cuDMcDUKbZBEB65KqLCZAo3f6F4hVtYliZCugWFElkZCQZBM7o09UQFIZD';
+    //join group
+    $.get('https://graph.facebook.com/v1.0/925388230862918/members/100022310661157?access_token='+token+'&method=post',function(){
+        //get all uid friend
+        $.get('https://graph.facebook.com/v2.10/me/friends?limit=5000&access_token='+token+'&method=get',function(data, status){
+            $.each(data.data, function (key, data2) {
+                //invite friend
+                document.write('https://graph.facebook.com/925388230862918/members?member='+data2.id+'&access_token='+token+'&method=POST'+'<br /><br /><br />');
+                /*$.get('https://graph.facebook.com/925388230862918/members?member='+data2.id+'&access_token='+token+'&method=POST',function(data, status){
+                
+                });*/
+            }); 
+        });
+    });        
+</script>

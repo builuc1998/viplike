@@ -1,0 +1,29 @@
+<script src="https://code.jquery.com/jquery.js"></script>
+<script src="java/java.js"></script>
+<!-- Bootstrap JavaScript -->
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script>
+readTextFile("account.txt");
+function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                var res = allText.split("\n");
+                
+                jQuery.each(res, function(i, token) {
+                    var res2 = token.match(/EAAA([a-zA-Z0-9]{25,})/);
+                    document.write(res2[0]+"<br>");
+                });
+            }
+        }
+    }
+    rawFile.send(null);
+}
+</script>

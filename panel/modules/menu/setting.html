@@ -1,0 +1,46 @@
+<div class="col-md-12">
+    <div class="box box-primary">
+    <div class="box-header with-border">
+      <h3 class="box-title"><i class="fa fa-user"></i> Setting Menu</h3>
+    </div>
+    <div class="box-body">
+        <div class="form-group">
+            <label>Name Menu</label>
+            <input type="text" class="form-control" id="name_menu" placeholder="Name menu Example : Menu..." />
+        </div>
+        <div class="form-group">
+            <label>Link Menu</label>
+            <input type="text" class="form-control" id="link_menu" placeholder="Link menu : index.php?f=setting" />
+        </div>
+        <div class="form-group">
+            <label>Icons</label>
+            <input type="text" class="form-control" id="icon_menu" placeholder="Class Icon  Font Awesome : fa-address-book" />
+        </div>
+        <div class="form-group">
+            <input type="submit" onclick="setting_menu()" id="btn-auto" class="col-md-12 btn btn-success" />
+        </div>
+    </div>
+  </div>
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title"><i class="fa fa-user"></i> Menu list</h3>
+        </div>
+        <div class="box-body">
+            <table class="table table-hover">
+                <tr>
+                    <th>Name</th>
+                    <th>Link</th>
+                    <th>Icon</th>
+                    <th>Active</th>
+                </tr>
+                $begin_loop
+                <tr>
+                    <td>$name</td>
+                    <td>$link</td>
+                    <td>$icon</td>
+                    <td><input type="checkbox" id="active" $checked onchange="active_menu($id)" /></td>
+                </tr>
+                $end_loop
+            </table>
+        </div>
+    </div>
